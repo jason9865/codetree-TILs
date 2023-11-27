@@ -32,7 +32,7 @@ public class Main {
 			}
 		}
 		
-		maxK = 100000;
+		maxK = 1;
 		maxCount = 0;
 
 		for (int k = 1; k < limit; k++) {
