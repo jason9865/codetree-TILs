@@ -29,10 +29,10 @@ public class Main {
                     count = 1;
                 else {
                     count++;
-                    if(maxCount < count)
-                        maxCount = count;
                 }
             }
+            if(maxCount < count)
+                maxCount = count;
             if (maxCount >= m) 
                 ans++;
         }
@@ -46,10 +46,10 @@ public class Main {
                     count = 1;
                 else {
                     count++;
-                    if(maxCount < count)
-                        maxCount = count;
                 }
             }
+            if(maxCount < count)
+                maxCount = count;
             if (maxCount >= m) 
                 ans++;
         }
