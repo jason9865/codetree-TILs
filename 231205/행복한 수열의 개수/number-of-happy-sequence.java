@@ -23,11 +23,15 @@ public class Main {
 
         for (int i = 0 ; i < n; i++) {
             int count = 1;
+            int maxCount = 1;
             for (int j = 0; j < n-1; j++) {
                 if (map[i][j] != map[i][j + 1])
                     count = 1;
-                else 
+                else {
                     count++;
+                    if(maxCount < count)
+                        maxCount = count;
+                }
             }
             if (count >= m) 
                 ans++;
@@ -36,11 +40,15 @@ public class Main {
 
         for (int i = 0 ; i < n; i++) {
             int count = 1;
+            int maxCount = 1;
             for (int j = 0; j < n-1; j++) {
                 if (map[j][i] != map[j+1][i])
                     count = 1;
-                else 
+                else {
                     count++;
+                    if(maxCount < count)
+                        maxCount = count;
+                }
             }
             if (count >= m) 
                 ans++;
