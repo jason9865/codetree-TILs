@@ -33,7 +33,7 @@ public class Main {
                         maxCount = count;
                 }
             }
-            if (count >= m) 
+            if (maxCount >= m) 
                 ans++;
         }
 
@@ -50,7 +50,7 @@ public class Main {
                         maxCount = count;
                 }
             }
-            if (count >= m) 
+            if (maxCount >= m) 
                 ans++;
         }
         
