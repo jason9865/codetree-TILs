@@ -12,5 +12,6 @@ for i in range(n):
     else:
         cnt_list.append(cnt)
         cnt = 1
+cnt_list.append(cnt)
 
 print(max(cnt_list))
