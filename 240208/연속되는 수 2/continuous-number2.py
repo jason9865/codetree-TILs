@@ -14,4 +14,11 @@ for i in range(n):
         cnt = 1
 cnt_list.append(cnt)
 
-print(max(cnt_list))
+# print(max(cnt_list))
+max_cnt = 0
+
+for i in range(len(cnt_list)):
+    if max_cnt < cnt_list[i]:
+        max_cnt = cnt_list[i]
+
+print(max_cnt)
