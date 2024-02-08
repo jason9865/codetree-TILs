@@ -1,5 +1,5 @@
 n = int(input())
-cnt = 0
+cnt = 1
 matrix = []
 cnt_list = []
 for i in range(n):
