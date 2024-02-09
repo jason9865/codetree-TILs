@@ -1,31 +1,28 @@
-N,M = tuple(map(int, input().split()))
+MAX_T = 1000000
 
-MAX_A = 1000*N
-MAX_B = 1000*M
+# 변수 선언 및 입력
+n,m = tuple(map(int, input().split()))
+pos_a, pos_b = [0] * (MAX_T + 1), [0] * (MAX_T + 1)
 
-pos_A = [0]*MAX_A
-pos_B = [0]*MAX_B
-
-time_A = 1
-for i in range(1,N+1):
-    d,t = list(input().split())
-
-    for j in range(int(t)):
-        pos_A[time_A] = pos_A[time_A-1] + (1 if d == 'R' else -1)
-        time_A += 1
-
-time_B = 1
-for i in range(1,M+1):
-    d,t = list(input().split())
-
-    for j in range(int(t)):
-        pos_B[time_B] = pos_B[time_B-1] + (1 if d=='R' else -1)
-        time_B += 1
-
+# A가 매 초마다 서있는 위치를 기록
+time_a = 1
+for _ in range(n):
+    d, t = tuple(input().split())
+    
+    for _ in range(int(t)):
+        pos_a[time_a] = pos_a[time_a - 1] + (1 if d == 'R' else -1)
+        time_a += 1
+    
+time_b = 1
+for _ in range(m):
+    d, t = tuple(input().split())
+    for _ in range(int(t)):
+        pos_b[time_b] = pos_b[time_b - 1] + (1 if d == 'R' else -1)
+        time_b += 1
 
 ans = -1
-for i in range(1,time_A):
-    if pos_A[i] == pos_B[i]:
+for i in range(1, time_a):
+    if pos_a[i] == pos_b[i]:
         ans = i
         break
 
