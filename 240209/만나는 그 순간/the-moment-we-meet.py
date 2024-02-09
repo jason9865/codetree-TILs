@@ -24,11 +24,9 @@ for i in range(1,M+1):
 
 
 ans = -1
-for i in range(1,time_A+1):
+for i in range(1,time_A):
     if pos_A[i] == pos_B[i]:
         ans = i
         break
 
 print(ans)
-#print(pos_B)
-#print(pos_A)
