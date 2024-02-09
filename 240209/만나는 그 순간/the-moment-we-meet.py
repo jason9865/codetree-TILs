@@ -1,7 +1,7 @@
 N,M = tuple(map(int, input().split()))
 
-MAX_A = 30 # 1000*N
-MAX_B = 30 # 1000*M
+MAX_A = 1000*N
+MAX_B = 1000*M
 
 pos_A = [0]*MAX_A
 pos_B = [0]*MAX_B
