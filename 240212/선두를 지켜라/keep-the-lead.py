@@ -2,8 +2,8 @@ MAX_T = 1000*1000
 N,M = tuple(map(int, input().split()))
 
 # MAX_T로 수정할것
-pos_A = [0]*30
-pos_B = [0]*30
+pos_A = [0]*MAX_T
+pos_B = [0]*MAX_T
 
 time_A = 1
 for i in range(N):
