@@ -28,9 +28,7 @@ for i in range(M):
 
 cnt = 0
 for i in range(1,time_A):
-    if i != 1 and pos_A[i]>pos_B[i] and pos_A[i-1] == pos_B[i-1]:
+    if i != 1 and pos_A[i] != pos_B[i] and pos_A[i-1] == pos_B[i-1]:
         cnt += 1
-    elif i != 1 and pos_A[i]<pos_B[i] and pos_A[i-1] == pos_B[i-1]:
-        cnt+= 1
 
 print(cnt)
