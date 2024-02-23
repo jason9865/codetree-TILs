@@ -29,8 +29,8 @@ public class Main {
         int count = 0;
 
         for (int s = 1; s <= n; s++) {
-            for (int i = 1; i <= n - s + 1; i++) {
-                if (getPrefixSum(s,i) == k)
+            for (int e = 1; e <= n - s + 1; e++) {
+                if (getPrefixSum(s,e) == k)
                     count++;
             }
         }
@@ -39,8 +39,8 @@ public class Main {
 
     }
 
-    private static int getPrefixSum(int scope, int index) {
-        return prefixSum[index + scope - 1] - prefixSum[index - 1];
+    private static int getPrefixSum(int start, int end) {
+        return prefixSum[end] - prefixSum[start - 1];
     }
 
 }
