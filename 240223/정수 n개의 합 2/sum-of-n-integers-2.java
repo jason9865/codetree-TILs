@@ -22,8 +22,9 @@ public class Main {
         }
 
         int ans = Integer.MIN_VALUE;
-        for (int i = 1; i < n; i++) {
-            ans = Math.max(ans,arr[i] + arr[i-1]);
+        for (int i = k; i < n; i++) {
+            int temp = currSum[i] - currSum[i-k]; 
+            ans = Math.max(ans,temp);
         }
 
         System.out.println(ans);
