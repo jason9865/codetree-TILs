@@ -29,7 +29,7 @@ public class Main {
         int count = 0;
 
         for (int s = 1; s <= n; s++) {
-            for (int i = 1; i < n - s + 1; i++) {
+            for (int i = 1; i <= n - s + 1; i++) {
                 if (getPrefixSum(s,i) == k)
                     count++;
             }
@@ -40,7 +40,7 @@ public class Main {
     }
 
     private static int getPrefixSum(int scope, int index) {
-        return prefixSum[index + scope] - prefixSum[index - 1];
+        return prefixSum[index + scope - 1] - prefixSum[index - 1];
     }
 
 }
