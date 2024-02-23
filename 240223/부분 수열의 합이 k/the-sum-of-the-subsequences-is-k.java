@@ -29,7 +29,7 @@ public class Main {
         int count = 0;
 
         for (int s = 1; s <= n; s++) {
-            for (int e = 1; e <= n - s + 1; e++) {
+            for (int e = 1; e <= n; e++) {
                 if (getPrefixSum(s,e) == k)
                     count++;
             }
