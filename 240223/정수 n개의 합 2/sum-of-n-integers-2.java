@@ -21,7 +21,7 @@ public class Main {
             currSum[i] = arr[i] + currSum[i - 1];
         }
 
-        int ans = 0;
+        int ans = Integer.MIN_VALUE;
         for (int i = 1; i < n; i++) {
             ans = Math.max(ans,arr[i] + arr[i-1]);
         }
