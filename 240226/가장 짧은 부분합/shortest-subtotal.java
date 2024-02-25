@@ -17,20 +17,25 @@ public class Main {
             arr[i] = Integer.parseInt(st.nextToken());
 
         ans = Integer.MAX_VALUE;
+
+        int cumSum = 0;
+        int j = 0;
         for (int i = 1; i <= n; i++) {
-            int cumSum = 0;
-            int j = i;
             
-            while(j <= n){
-                cumSum += arr[j];
-                if (cumSum >= 15)
-                    break;
+            while(j + 1 <= n && cumSum < s){
+                cumSum += arr[j + 1];
                 j++;
             }
-            // System.out.println(i + " => " + cumSum);
+            
+            if (cumSum < s)
+                break;
+
             ans = Math.min(ans, j - i + 1);
+            cumSum -= arr[i];
 
         }
+        if (ans == Integer.MAX_VALUE) 
+            ans = -1;
 
         System.out.println(ans);
 
