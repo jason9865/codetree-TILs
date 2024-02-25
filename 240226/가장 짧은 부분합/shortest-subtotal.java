@@ -21,16 +21,14 @@ public class Main {
             int cumSum = 0;
             int j = i;
             
-            while(j <= n && cumSum < s){
+            while(j <= n){
                 cumSum += arr[j];
+                if (cumSum >= 15)
+                    break;
                 j++;
             }
             // System.out.println(i + " => " + cumSum);
-            if (j == i) {
-                ans = 1;
-            } else {
-                ans = Math.min(ans, j - i + 1);
-            }
+            ans = Math.min(ans, j - i + 1);
 
         }
 
