@@ -26,7 +26,11 @@ public class Main {
                 j++;
             }
             // System.out.println(i + " => " + cumSum);
-            ans = Math.min(ans, j - i + 1);
+            if (j == i) {
+                ans = 1;
+            } else {
+                ans = Math.min(ans, j - i + 1);
+            }
 
         }
 
