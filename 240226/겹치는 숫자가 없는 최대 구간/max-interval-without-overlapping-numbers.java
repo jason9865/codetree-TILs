@@ -2,16 +2,17 @@ import java.util.*;
 import java.io.*;
 
 public class Main {
+    static final int MAX_NUM = 100_000;
+
     static int n;
     static int[] arr;
-    static int[] countArr;
+    static int[] countArr = new int[MAX_NUM + 1];
     public static void main(String[] args) throws IOException{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st;
         
         n = Integer.parseInt(br.readLine());
         arr = new int[n + 1];
-        countArr = new int[n + 1];
 
         st = new StringTokenizer(br.readLine());
         for (int i = 1; i <= n; i++) {
