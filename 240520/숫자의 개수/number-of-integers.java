@@ -20,7 +20,7 @@ public class Main {
             arr[i] = Integer.parseInt(st.nextToken());
         }
 
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < m; i++) {
             int target = Integer.parseInt(br.readLine());
             System.out.println(upperBound(target) - lowerBound(target));
         }
