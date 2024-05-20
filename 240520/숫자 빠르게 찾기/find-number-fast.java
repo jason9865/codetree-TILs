@@ -39,10 +39,10 @@ public class Main {
             } else if(arr[mid] > target){
                 right = mid - 1;
             } else{
-                ans = mid;
+                ans = mid + 1;
                 break;
             }
         }
-        System.out.println(ans + 1);
+        System.out.println(ans);
     }
 }
