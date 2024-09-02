@@ -6,8 +6,8 @@ map_list = [[map(int, sys.stdin.readline())] for _ in range (n)]
 
 visited = [[False for _ in range(m)] for _ in range(n)]
 
-dr = [1,0,-1,0]
-dc = [0,1,0,-1]
+dr = [1,0]
+dc = [0,1]
 
 ans = 0
 
@@ -21,9 +21,9 @@ def dfs(r,c):
     
     visited[r - 1][c - 1] = True
 
-    for d in range(4):
+    for d in range(2):
         nr = r + dr[d]
-        nc = c + dc[c]
+        nc = c + dc[d]
 
         if (in_range(nr,nc) is False or visited[nr][nc] or map_list[nr][nc] == 0):
             continue
