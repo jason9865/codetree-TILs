@@ -27,7 +27,7 @@ def dfs(r,c):
         nc = c + dc[d]
 
         if not in_range(nr,nc) or visited[nr][nc] or map_list[nr][nc] == 0:
-             visited[nr][nc] = 1
+            visited[nr][nc] = 1
             dfs(nr,nc)
 
 visited[0][0] = 1
