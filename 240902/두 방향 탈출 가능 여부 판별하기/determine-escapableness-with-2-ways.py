@@ -19,7 +19,7 @@ def dfs(r,c):
         ans = 1
         return;
     
-    visited[r - 1][c - 1] = True
+    visited[r][c] = True
 
     for d in range(2):
         nr = r + dr[d]
