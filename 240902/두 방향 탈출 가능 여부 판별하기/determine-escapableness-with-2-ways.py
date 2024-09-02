@@ -20,7 +20,7 @@ def dfs(r,c):
         nr = r + dr[d]
         nc = c + dc[d]
 
-        if (in_range(nr,nc) is False or visited[nr][nc] or map_list[nr][nc] == 0):
+        if not in_range(nr,nc) or visited[nr][nc] or map_list[nr][nc] == 0:
             continue
 
         visited[nr][nc] = 1
