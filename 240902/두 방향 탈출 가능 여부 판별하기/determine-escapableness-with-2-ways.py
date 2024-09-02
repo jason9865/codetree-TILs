@@ -12,6 +12,7 @@ dc = [1,0]
 def in_range(r,c):
     return 0 <= r and r < n and 0 <=c and c < m
 
+
 def dfs(r,c):
     if visited[r][c] == 1:
         return
