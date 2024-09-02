@@ -26,7 +26,7 @@ def dfs(r,c):
         nr = r + dr[d]
         nc = c + dc[d]
 
-        if not in_range(nr,nc) or visited[nr][nc] or map_list[nr][nc] == 0:
+        if can_go(nr,nc):
             visited[nr][nc] = 1
             dfs(nr,nc)
 
