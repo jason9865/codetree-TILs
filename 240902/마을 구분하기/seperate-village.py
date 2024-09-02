@@ -47,7 +47,10 @@ for i in range(n):
             count += 1
             number = 0
             dfs(i,j)
-            answer.append(number)
+            if (number == 0):
+                answer.append(1)
+            else :
+                answer.append(number)
 
 print(count)
 answer.sort()
