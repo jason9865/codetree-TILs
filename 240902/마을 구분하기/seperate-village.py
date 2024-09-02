@@ -38,19 +38,17 @@ def dfs(r,c):
 
         if can_go(nr,nc):
             visited[nr][nc] = 1
-            dfs(nr,nc)
             number += 1
+            dfs(nr,nc)
 
 for i in range(n):
     for j in range(n):
         if grid[i][j] == 1 and not visited[i][j] :
+            visited[i][j] = 1
             count += 1
-            number = 0
+            number = 1
             dfs(i,j)
-            if (number == 0):
-                answer.append(1)
-            else :
-                answer.append(number)
+            answer.append(number)
 
 print(count)
 answer.sort()
