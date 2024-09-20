@@ -1,13 +1,14 @@
-def check_string(n):
-    leng = len(n)
-    for i in range(leng//2):
-        if n[i] != n[leng-1-i]:
+import sys
+
+word = sys.stdin.readline().strip()
+
+def check(word):
+    n = len(word)
+    for i in range(n//2):
+        if(word[i] != word[n- i - 1]):
             print("No")
-            return
+            return;
     print("Yes")
     return
 
-
-a = input()
-
-check_string(a)
+check(word)
